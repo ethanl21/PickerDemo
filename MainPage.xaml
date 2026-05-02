@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PickerDemo.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Header -->
+            <Label x:Name="HeaderLabel" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+            <Label x:Name="SubHeaderLabel" FontSize="14" HorizontalOptions="Center" TextColor="Gray" />
+
+            <!-- Test Case 1: Basic Picker -->
+            <Border Stroke="LightGray" StrokeThickness="1" StrokeShape="RoundRectangle 8" Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Test 1: Basic Picker" FontAttributes="Bold" />
+                    <Label Text="3-5 items, no special styling" FontSize="12" TextColor="Gray" />
+                    <Picker x:Name="BasicPicker" Title="Select an item">
+                        <Picker.Items>
+                            <x:String>Apple</x:String>
+                            <x:String>Banana</x:String>
+                            <x:String>Orange</x:String>
+                            <x:String>Grape</x:String>
+                            <x:String>Mango</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label x:Name="BasicPickerResult" Text="Selected: (none)" FontSize="12" TextColor="Blue" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Test Case 2: Picker with Title -->
+            <Border Stroke="LightGray" StrokeThickness="1" StrokeShape="RoundRectangle 8" Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Test 2: Picker with Title" FontAttributes="Bold" />
+                    <Label Text="Title displayed when nothing selected" FontSize="12" TextColor="Gray" />
+                    <Picker x:Name="TitlePicker" Title="Choose a fruit" TitleColor="Red">
+                        <Picker.Items>
+                            <x:String>Apple</x:String>
+                            <x:String>Banana</x:String>
+                            <x:String>Orange</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label x:Name="TitlePickerResult" Text="Selected: (none)" FontSize="12" TextColor="Blue" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Test Case 3: Styled Picker -->
+            <Border Stroke="LightGray" StrokeThickness="1" StrokeShape="RoundRectangle 8" Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Test 3: Styled Picker (Font, TextColor)" FontAttributes="Bold" />
+                    <Label Text="Custom font and text color applied" FontSize="12" TextColor="Gray" />
+                    <Picker x:Name="StyledPicker" Title="Styled picker"
+                            TextColor="Green"
+                            FontFamily="Helvetica"
+                            FontSize="18">
+                        <Picker.Items>
+                            <x:String>Option A</x:String>
+                            <x:String>Option B</x:String>
+                            <x:String>Option C</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label x:Name="StyledPickerResult" Text="Selected: (none)" FontSize="12" TextColor="Blue" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Test Case 4: Picker with Many Items (US States) -->
+            <Border Stroke="LightGray" StrokeThickness="1" StrokeShape="RoundRectangle 8" Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Test 4: Picker with Many Items (50 US States)" FontAttributes="Bold" />
+                    <Label Text="Tests scrolling behavior with long list" FontSize="12" TextColor="Gray" />
+                    <Picker x:Name="ManyItemsPicker" Title="Select a state">
+                        <Picker.Items>
+                            <x:String>Alabama</x:String>
+                            <x:String>Alaska</x:String>
+                            <x:String>Arizona</x:String>
+                            <x:String>Arkansas</x:String>
+                            <x:String>California</x:String>
+                            <x:String>Colorado</x:String>
+                            <x:String>Connecticut</x:String>
+                            <x:String>Delaware</x:String>
+                            <x:String>Florida</x:String>
+                            <x:String>Georgia</x:String>
+                            <x:String>Hawaii</x:String>
+                            <x:String>Idaho</x:String>
+                            <x:String>Illinois</x:String>
+                            <x:String>Indiana</x:String>
+                            <x:String>Iowa</x:String>
+                            <x:String>Kansas</x:String>
+                            <x:String>Kentucky</x:String>
+                            <x:String>Louisiana</x:String>
+                            <x:String>Maine</x:String>
+                            <x:String>Maryland</x:String>
+                            <x:String>Massachusetts</x:String>
+                            <x:String>Michigan</x:String>
+                            <x:String>Minnesota</x:String>
+                            <x:String>Mississippi</x:String>
+                            <x:String>Missouri</x:String>
+                            <x:String>Montana</x:String>
+                            <x:String>Nebraska</x:String>
+                            <x:String>Nevada</x:String>
+                            <x:String>New Hampshire</x:String>
+                            <x:String>New Jersey</x:String>
+                            <x:String>New Mexico</x:String>
+                            <x:String>New York</x:String>
+                            <x:String>North Carolina</x:String>
+                            <x:String>North Dakota</x:String>
+                            <x:String>Ohio</x:String>
+                            <x:String>Oklahoma</x:String>
+                            <x:String>Oregon</x:String>
+                            <x:String>Pennsylvania</x:String>
+                            <x:String>Rhode Island</x:String>
+                            <x:String>South Carolina</x:String>
+                            <x:String>South Dakota</x:String>
+                            <x:String>Tennessee</x:String>
+                            <x:String>Texas</x:String>
+                            <x:String>Utah</x:String>
+                            <x:String>Vermont</x:String>
+                            <x:String>Virginia</x:String>
+                            <x:String>Washington</x:String>
+                            <x:String>West Virginia</x:String>
+                            <x:String>Wisconsin</x:String>
+                            <x:String>Wyoming</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label x:Name="ManyItemsResult" Text="Selected: (none)" FontSize="12" TextColor="Blue" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Test Case 5: Pre-selected Picker -->
+            <Border Stroke="LightGray" StrokeThickness="1" StrokeShape="RoundRectangle 8" Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Test 5: Pre-selected Picker" FontAttributes="Bold" />
+                    <Label Text="Item selected on load" FontSize="12" TextColor="Gray" />
+                    <Picker x:Name="PreSelectedPicker" Title="Pre-selected">
+                        <Picker.Items>
+                            <x:String>First</x:String>
+                            <x:String>Second</x:String>
+                            <x:String>Third</x:String>
+                            <x:String>Fourth</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label x:Name="PreSelectedResult" Text="Selected: Fourth" FontSize="12" TextColor="Blue" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Accessibility Info -->
+            <Border Stroke="LightGray" StrokeThickness="1" StrokeShape="RoundRectangle 8" Padding="15" BackgroundColor="#f0f0f0">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Accessibility Testing Notes:" FontAttributes="Bold" />
+                    <Label Text="• Test with VoiceOver enabled (iOS)" FontSize="12" />
+                    <Label Text="• Test with VoiceOver enabled (macOS)" FontSize="12" />
+                    <Label Text="• Test keyboard navigation (Tab, Arrow keys, Enter)" FontSize="12" />
+                    <Label Text="• Verify accessibility labels are read correctly" FontSize="12" />
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
